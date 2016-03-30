@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <title>Haastattelu</title>
+    <style>
+        .fail {
+            background-color: crimson;
+        }
+        .ok {
+            background-color: lawngreen;
+        }
+        .data {
+            padding: 1em;
+            border: 1px solid grey;
+        }
+    </style>
+</head>
+<body>
+  <div id="table" class="data">1,2,3,5,6</div>
+  <div id="table2" class="data">6,5,3,2,1</div>
+  <div id="result" class="fail" >RESULT (green=OK)</div>
+  <script type="text/javascript">
+
+      window.onload = function(event) {
+          var elem = document.getElementById("table");
+          var elem2 = document.getElementById("table2");
+
+          // TODO: implement the reversion of innerText of #table
+          // ... your implementation goes here
+
+
+          if (elem.innerText === elem2.innerText) {
+              document.getElementById("result").className = "ok";
+          }
+      };
+  </script>
+
+</body>
+</html>
